@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #0d1f2d;
+}
+
+.form-wrapper {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    color: #007090;
+    font-weight: 600;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #007090;
+}
+
+.publicar-btn {
+    padding: 10px;
+    border: solid 1px #F2545B;
+    background-color: #F2545B;
+    color: #fff;
+    border-radius: 50px;
+}

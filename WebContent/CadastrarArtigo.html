@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/cadastro-artigo.css">
+    <title>Nova noticias</title>
+</head>
+<body>
+	<h1>Publicar artigo</h1>
+    <div class="form-wrapper">
+        <form action="PublicarArtigo.do">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" value="" placeholder="Nome do seu artigo">
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao" value="" placeholder="Descrição do seu artigo">
+            <label for="texto">Seu artigo</label>
+            <textarea name="texto" type="text" placeholder="Seu artigo..."></textarea>
+            <button type="submit" class="publicar-btn">Publicar</button>
+        </form>
+    </div>
+</body>
+</html>
