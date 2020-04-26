@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #007090;
+}
+
+.publicar-btn {
+    padding: 10px;
+    border: solid 1px #F2545B;
+    background-color: #F2545B;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.publicar-btn:hover{
+    background-color: #fff;
+    color: #F2545B;
+}
+
+.atr-wrapper{
+	width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-atr{
+	padding: 20px;
+    border-bottom: solid 1px #ccc;
+    width: 40%;
+}
+
+.atr-opt{
+	display:flex;
+}
+
+.atr-opt-btn{
+	padding: 10px;
+    border: solid 1px #F2545B;
+    background-color: #FFF;
+    color: #F2545B;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-left: 10px;
+}

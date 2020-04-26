@@ -44,5 +44,43 @@ public class ArtigoDAO {
 		return artigo.getId();
 	}
 	
+	//Método Read
+	public ArrayList<Artigos> listarArtigos() {
+		String listar = "SELECT * FROM noticia;";
+		
+		try (PreparedStatement pst = connection.prepareStatement(listar)) {
+
+            ResultSet resultado = pst.executeQuery();
+
+            ArrayList<Artigos> artigo = new ArrayList<Artigos>();
+
+            while (resultado.next()) {
+                Artigos atr = new Artigos(0, "", "", "", null);
+
+                int id = resultado.getInt("id");
+                String titulo = resultado.getString("titulo");
+                String descricao = resultado.getString("descricao");
+                String texto = resultado.getString("texto");
+
+                atr.setId(id);
+                atr.setTitulo(titulo);
+                atr.setDescricao(descricao);
+                atr.setTexto(texto);
+
+                artigo.add(atr);
+            }
+
+            return artigo;
+
+        } catch (SQLException e) {
+            System.err.println("Falha no banco: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Falha no java: " + e.getMessage());
+            e.printStackTrace();
+        }
+		return null;
+	}
+	
 
 }
