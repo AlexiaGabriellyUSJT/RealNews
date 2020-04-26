@@ -16,7 +16,7 @@ public class ArtigoDAO {
 	
 	//Método Create
 	public int createArtigo(Artigos artigo) {
-		String create = "INSERT INTO artigos(titulo, descricao, texto) VALUES(?, ?, ?)";
+		String create = "INSERT INTO noticia(titulo, descricao, texto) VALUES(?, ?, ?)";
 		
 		try (PreparedStatement pst = connection.prepareStatement(create)){
 			pst.setString(1, artigo.getTitulo());
