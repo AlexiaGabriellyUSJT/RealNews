@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Artigos<Comentario> {
+public class Artigos {
     private int id;
     private String titulo;
     private String descricao;
@@ -17,11 +17,7 @@ public class Artigos<Comentario> {
         this.comentario = comentario;
     }
 
-    public Artigos() {
-        this(0, "", "", "", null);
-    }
-
-    //MÃ©todos de get
+    //Métodos de get
 
     public int getId() {
         return this.id;
@@ -43,7 +39,7 @@ public class Artigos<Comentario> {
         return this.comentario;
     }
 
-    //MÃ©todos de set
+    //Métodos de set
     public void setId(int id) {
         this.id = id;
     }
