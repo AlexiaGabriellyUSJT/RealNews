@@ -17,9 +17,15 @@ public class Artigos {
         this.comentario = comentario;
     }
 
-    //Métodos de get
+    //Construtor
 
-    public int getId() {
+    public Artigos() {
+    	this(0, "", "", "", null);
+	}
+    
+  //Métodos de get
+
+	public int getId() {
         return this.id;
     }
 

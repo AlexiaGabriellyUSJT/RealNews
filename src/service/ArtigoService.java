@@ -18,4 +18,8 @@ public class ArtigoService {
 	public ArrayList<Artigos> listarArtigos(Artigos atr) {
 		return artigo.listarArtigos();
 	}
+	
+	public void deletarArtigo(Artigos atr) {
+		artigo.deletarArtigo(atr);
+	}
 }

@@ -82,5 +82,21 @@ public class ArtigoDAO {
 		return null;
 	}
 	
+	//Método Delete
+	public void deletarArtigo(Artigos atr) {
+		String deletarNoticia = "DELETE FROM noticia WHERE id = ?;";
+		
+		try (PreparedStatement pst = connection.prepareStatement(deletarNoticia)) {
+			pst.setInt(1, atr.getId());
+			pst.execute();
+		} catch (SQLException e) {
+			System.err.println("Falha no banco: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Falha no java: " + e.getMessage());
+            e.printStackTrace();
+        }
+	}
+	
 
 }
