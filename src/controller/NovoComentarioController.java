@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,8 +35,8 @@ public class NovoComentarioController extends HttpServlet {
         art.setId(idArtigos);
         Comentario com = new Comentario(0, nome, texto, art);
 
-        ArtigoService atrService = new ArtigoService();
-        atrService.create(com);
+        ComentarioService comService = new ComentarioService();
+        comService.create(com);
 
         PrintWriter out = response.getWriter();
         out.println("Comentario criado com sucesso");
