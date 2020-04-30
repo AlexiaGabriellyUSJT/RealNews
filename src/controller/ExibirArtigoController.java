@@ -33,6 +33,7 @@ public class ExibirArtigoController extends HttpServlet {
     	
     	Artigos atr = new Artigos(id, "", "", "", null);
     	Artigos artigo = atrService.exibirArtigo(atr);
+    	ArrayList<Comentario> comentarios = comService.read(atr);
     	
     	PrintWriter out = response.getWriter();
     	out.println("<!DOCTYPE html><html lang=\"pt-br\"><head><meta charset='UTF-8'><link rel='stylesheet' type='text/css' href='style/main-style.css' media='screen' /><title>RealNews</title></head>");
