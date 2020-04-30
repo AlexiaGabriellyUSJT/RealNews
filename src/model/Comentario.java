@@ -4,13 +4,13 @@ public class Comentario {
     private int id;
     private String nome;
     private String texto;
-    private Artigo artigo;
+    private Artigos artigo;
     
     public Comentario() {
         this(0, "", "", null);
     }
 
-    public Comentario(int id, String nome, String texto, Artigo artigo) {
+    public Comentario(int id, String nome, String texto, Artigos artigo) {
         this.id = id;
         this.nome = nome;
         this.texto = texto;
@@ -29,7 +29,7 @@ public class Comentario {
         return this.texto;
     }
    
-    public Artigo getArtigo() {
+    public Artigos getArtigo() {
         return this.artigo;
     }
    
@@ -45,7 +45,7 @@ public class Comentario {
         this.texto = texto;
     }
 
-    public void setArtigo(Artigo artigo) {
+    public void setArtigo(Artigos artigo) {
         this.artigo = artigo;
     }
 }
