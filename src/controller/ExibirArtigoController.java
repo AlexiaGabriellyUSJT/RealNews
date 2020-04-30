@@ -1,10 +1,11 @@
 package controller;
 import model.Artigos;
 import model.Comentario;
-import service.Comentario;
+import service.ComentarioService;
 import service.ArtigoService;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +26,7 @@ public class ExibirArtigoController extends HttpServlet {
     	int id = 0;
     	HttpSession session = request.getSession();
     	ArtigoService atrService = new ArtigoService();
+    	ComentarioService comService = new ComentarioService();
     	
     	if(session.getAttribute("artigo-id").equals("")) {
     		id = Integer.parseInt(request.getParameter("artigo-id"));
