@@ -39,7 +39,8 @@ public class ListarArtigoController extends HttpServlet {
             out.println("<p class=\"atr-desc\">" + atr.getDescricao() + "</p>");
             out.println("<div class=\"atr-opt\">");
             out.println("<form action='DeletarArtigo.do' method='post'><input type='hidden' name='artigo-id' value='" + atr.getId() + "'/><button class=\"atr-opt-btn\">Deletar</button></form>");
-            out.println("<form action=\"AtualizarArtigo.do\" method=\"get\"><button class=\"atr-opt-btn\">Atualizar</button></form>");
+            out.println("<form action='OpenArtigo.do' method='get'><input type='hidden' name='artigo-id' value='" + atr.getId() + "'/><button type='submit' class=\"atr-opt-btn\">Visualizar</button></form>");
+            out.println("<form action='AtualizarArtigo.do' method='get'><input type='hidden' name='artigo-id' value='" + atr.getId() + "'/><button class=\"atr-opt-btn\">Atualizar</button></form>");
             out.println("</div>");
             out.println("</div>");
     	}

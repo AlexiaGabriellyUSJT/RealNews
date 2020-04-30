@@ -22,4 +22,12 @@ public class ArtigoService {
 	public void deletarArtigo(Artigos atr) {
 		artigo.deletarArtigo(atr);
 	}
+
+	public Artigos exibirArtigo(Artigos atr) {
+		return artigo.exibirArtigo(atr);
+	}
+	
+	public void updateArtigo(Artigos atr) {
+		artigo.updateArtigo(atr);
+	}
 }
