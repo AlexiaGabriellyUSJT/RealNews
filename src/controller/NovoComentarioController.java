@@ -32,7 +32,7 @@ public class NovoComentarioController extends HttpServlet {
 
         Artigos art = new Artigos();
         art.setId(idArtigos);
-        Comentario com = new Comentario(0, nome, texto, news);
+        Comentario com = new Comentario(0, nome, texto, art);
 
         ArtigoService atrService = new ArtigoService();
         atrService.create(com);
