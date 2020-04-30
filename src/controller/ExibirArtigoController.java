@@ -1,5 +1,7 @@
 package controller;
 import model.Artigos;
+import model.Comentario;
+import service.Comentario;
 import service.ArtigoService;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,11 +37,19 @@ public class ExibirArtigoController extends HttpServlet {
     	PrintWriter out = response.getWriter();
     	out.println("<!DOCTYPE html><html lang=\"pt-br\"><head><meta charset='UTF-8'><link rel='stylesheet' type='text/css' href='style/main-style.css' media='screen' /><title>RealNews</title></head>");
     	out.println("<header><span class=\"page-title\">Real News</span><nav><a class=\"publicar-btn\" href=\"./CadastrarArtigo.html\">Novo artigo</a></nav></header>");
-    	
     	out.println("<div class=\"atr-wrapper\">");
     	out.println("<div>");
     	out.println("<h3>" + artigo.getTitulo() + "</h3>");
     	out.println("<p>" + artigo.getTexto() + "</p>");
+        out.println("<div class='comentarios-content'><p class='titulo'> Comentarios</p>");
+        
+        for(Comentario c : comentarios) {
+            out.println("<div class='comentario'><p class='nome'>"+c.getNome()+"</p><p class='texto'>"+c.getTexto()+"</p></div>");
+        }
+        
+        out.println("</div>");
+        out.println("<form action='NovoComentario.do' method='post' class='novo-comentario '><p class='titulo '>Adicionar novo comentario</p> <input type='text' name='nome' placeholder='Nome' /><textarea type='text' name='texto' placeholder='Escreva aqui seu comentario'></textarea><button type='submit'>Adicionar</button></form>");
+        out.println("<form action='NoticiasUser.do' method='get' class='novo-comentario '><button type='submit'>Voltar</button></form>");
     	out.println("</div>");
     	out.println("</div>");
     	
