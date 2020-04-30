@@ -45,7 +45,7 @@ public class ComentarioDAO {
         return comentario.getId();
     }
 
-    public ArrayList<Comentario> read(Artigo a) {
+    public ArrayList<Comentario> read(Artigos a) {
         String read = "SELECT * FROM comentario WHERE fk_noticia_id = ?;";
 
         try (PreparedStatement pst = connection.prepareStatement(read)) {
@@ -58,7 +58,7 @@ public class ComentarioDAO {
 
             while (resultado.next()) {
                 Comentario c = new Comentario();
-                Artigo art = new Artigo();
+                Artigos art = new Artigos();
 
                 int id = resultado.getInt("id");
                 String nome = resultado.getString("nome");
