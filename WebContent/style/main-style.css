@@ -55,3 +55,8 @@ header {
     text-decoration: none;
     margin-left: 10px;
 }
+
+.comentarios-content {
+	width: 90vw;
+	border-top: solid 1px #ccc;
+}
